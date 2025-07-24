@@ -3,7 +3,7 @@ import { ref, computed, toRaw, isProxy } from 'vue'
 const props = defineProps(['field', 'value'])
 const must = ref(true)
 
-const reserved = /[+\-=&|><!(){}\[\]^"~*?:\\/]/g
+const reserved = /[+\=&|><!(){}\[\]^"~*?:\\/]/g
 function escapeSegment(segment) {
   return String(segment).replace(reserved, '\\$&')
 }
@@ -19,7 +19,7 @@ const filter = computed(() => {
   let value = props.value
   if (isProxy(value)) value = toRaw(value)
   if (typeof value === 'string') {
-    return `${prefix}${field}:"${escapeQueryString(value)}"`
+    return `${prefix}${field}:"${value}"`
   } else if (typeof value === 'number' || typeof value === 'boolean') {
     return `${prefix}${field}:${value}`
   } else {
