@@ -10,7 +10,7 @@ const selectedValue = ref(null)
 
 async function handleUrl(url) {
   const id = url.split('/dataset/')[1]
-  const response = await fetch('https://demo.georchestra.org/geonetwork/duckhub/api/search/records/_search?bucket=bucket&relatedType=fcats', {
+  const response = await fetch(new URL(url).origin + '/geonetwork/srv/api/search/records/_search?bucket=bucket&relatedType=fcats', {
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify({ query: { ids: { values: [id] } } })
