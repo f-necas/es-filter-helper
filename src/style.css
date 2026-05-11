@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #409eff;
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --danger-color: #f56c6c;
+  --info-color: #909399;
+  --text-primary: #303133;
+  --text-secondary: #606266;
+  --text-placeholder: #909399;
+  --border-color: #dcdfe6;
+  --bg-color: #f5f7fa;
+  --bg-light: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfcfda;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8b8c8;
+}
+
+/* Element Plus customization */
+.el-button {
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.el-button--primary {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.el-button--primary:hover {
+  background: #66b1ff;
+  border-color: #66b1ff;
+}
+
+.el-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.el-card:hover {
+  box-shadow: 0 2px 12px rgba(64, 158, 255, 0.1);
+}
+
+.el-input__wrapper {
+  border-radius: 4px;
+}
+
+.el-form-item {
+  margin-bottom: 1em;
+}
+
+.el-checkbox__label {
+  color: var(--text-primary);
+}
+
+.el-tag {
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+.el-tag--success {
+  background-color: #f0f9ff;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.el-alert {
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+.el-alert--error {
+  background-color: #fef0f0;
+  border-color: #fde2e4;
+  color: #f56c6c;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-placeholder);
+}
+
+.gap-1 {
+  gap: 0.5em;
+}
+
+.gap-2 {
+  gap: 1em;
+}
+
+.gap-3 {
+  gap: 1.5em;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  html, body {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .el-container {
+    flex-direction: column;
+  }
+}
+
