@@ -23,7 +23,7 @@ function buildPath(parent, key, isArray) {
 function formatValue(value) {
   if (value === null) return 'null'
   if (typeof value === 'string') {
-    return value.length > 50 ? value.substring(0, 50) + '...' : value
+    return value
   }
   if (typeof value === 'boolean') return value ? 'true' : 'false'
   return String(value)
